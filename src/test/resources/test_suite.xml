@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+<suite name="Long UI Test Suite" parallel="methods">
+
+    <listeners>
+        <listener class-name="test_listeners.TestListener"/>
+        <listener class-name="test_listeners.TestRetryListener"/>
+    </listeners>
+
+    <test name="Login Tests">
+        <classes>
+            <class name="web.FrameworkTest" />
+            <class name="web.FrameworkTest2" />
+        </classes>
+    </test>
+</suite>
